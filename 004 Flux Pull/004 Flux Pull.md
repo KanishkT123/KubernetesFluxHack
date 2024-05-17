@@ -24,7 +24,7 @@ Specifically, we now need to:
 3. Run the following to update the Flux configuration with a Kustomization:
 
     ```bash
-    az k8s-cofiguration flux kustomization create \
+    az k8s-configuration flux kustomization create \
     --cluster-name <clusterName> \ 
     --cluster-type connectedClusters \ 
     --name cluster-config  \
@@ -35,7 +35,7 @@ Specifically, we now need to:
 4. And run the following to delete the default Kustomization that we don't need anymore:
 
     ```bash
-    az k8s-cofiguration flux kustomization create \
+    az k8s-configuration flux kustomization delete \
     --cluster-name <clusterName> \ 
     --cluster-type connectedClusters \ 
     --name cluster-config  \
